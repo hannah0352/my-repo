@@ -62,5 +62,21 @@
       first to other research institutions starting in January 1991 and to the
       general public on the Internet in August 1991.
     </p>
+    <input
+      type="button"
+      value="night"
+      onclick="
+        var target=document.querySelector('body');
+        if(this.value==='night') {
+          target.style.backgroundColor='black';
+          target.style.color='white';
+          this.value='day'
+        } else {
+          target.style.backgroundColor='white';
+          target.style.color='black';
+          this.value='night'
+        }
+    "
+    />
   </body>
 </html>
