@@ -1,9 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <style>
+      .web {
+        font-weight: bold;
+        color: red;
+      }
+      #first {
+        color: green;
+      }
+      span {
+        color: blue;
+      }
+    </style>
   </head>
-  <body></body>
+  <body>
+    <h1>WEB</h1>
+    <input
+      type="button"
+      value="night"
+      onclick="
+        document.querySelector('body').style.backgroundColor='black';
+        document.querySelector('body').style.color='white';
+    "
+    />
+    <input
+      type="button"
+      value="day"
+      onclick="
+        document.querySelector('body').style.backgroundColor='white';
+        document.querySelector('body').style.color='black';
+    "
+    />
+    <input
+      id="night_day"
+      type="button"
+      value="night"
+      onclick="
+        if(document.querySelector('#night_day').value==='night') {
+            document.querySelector('body').style.backgroundColor='black';
+            document.querySelector('body').style.color='white';
+            document.querySelector('#night_day').value='day'
+        } else {
+            document.querySelector('body').style.backgroundColor='white';
+            document.querySelector('body').style.color='black';
+            document.querySelector('#night_day').value='night'
+        }
+    "
+    />
+    <h2 style="color: aqua; background-color: blanchedalmond">JavaScript</h2>
+    <p>
+      The World Wide <span class="web" id="first">Web</span> (abbreviated WWW or
+      the <span class="web">Web</span>) is an information space where documents
+      and other <span class="web">Web</span>resources are identified by Uniform
+      Resource Locators (URLs), interlinked by hypertext links, and can be
+      accessed via the Internet.[1] English scientist Tim Berners-Lee invented
+      the World Wide <span class="web">Web</span> in 1989. He wrote the first
+      <span class="web">Web</span> browser computer program in 1990 while
+      employed at CERN in <span>Switzerland</span>.[2][3] The
+      <span class="web">Web</span> browser was released outside of CERN in 1991,
+      first to other research institutions starting in January 1991 and to the
+      general public on the Internet in August 1991.
+    </p>
+  </body>
 </html>
